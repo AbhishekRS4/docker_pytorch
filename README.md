@@ -41,9 +41,9 @@ then follow the instructions to install additional `nvidia-container-toolkit`
 
 ## Running training with PyTorch
 * Copy the directory containing the dataset files into the project directory so that it can be directly mounted onto the docker container
-* This happens with the option `--volume`
 * The following example command shows how to run the training
 ```
 docker run --rm -it --init   --gpus=all   --ipc=host   --user="$(id -u):$(id -g)"   --volume="$PWD:/app"   my_pytorch python3 modeling/train.py --dir_dataset /app/version2/
 ```
-* In the above example `my_pytorch` is the name of the docker container, `version2` is the directory containing the dataset files
+* In the above example `my_pytorch` is the name of the docker container, `version2` is the directory containing the dataset files in the project directory
+* The mounting of directory can be done with the option `--volume` where the `$PWD` on host is mounted to `/app` on the container
