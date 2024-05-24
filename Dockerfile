@@ -8,3 +8,5 @@ RUN sudo ln -snf /usr/share/zoneinfo/$TZ /etc/localtime
 RUN pip install wandb --upgrade
 RUN pip install scikit-image
 RUN pip install scikit-learn
+RUN pip install pykan==0.0.5
+RUN pip install matplotlib==3.7.4
