@@ -45,5 +45,5 @@ then follow the instructions to install additional `nvidia-container-toolkit`
 ```
 docker run --rm -it --init   --gpus=all   --ipc=host   --user="$(id -u):$(id -g)"   --volume="$PWD:/app"   my_pytorch python3 modeling/train.py --dir_dataset /app/dir_dataset/
 ```
+* A directory can be mounted with the option `--volume` where the `$PWD` on host is mounted to `/app` on the container
 * In the above example `my_pytorch` is the name of the docker container, `dir_dataset` is the directory containing the dataset files, in the same directory as the project directory i.e. `$PWD` on the host
-* The mounting of directory can be done with the option `--volume` where the `$PWD` on host is mounted to `/app` on the container

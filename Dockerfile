@@ -10,3 +10,4 @@ RUN pip install scikit-image
 RUN pip install scikit-learn
 RUN pip install pykan==0.0.5
 RUN pip install matplotlib==3.7.4
+RUN pip install sympy==1.12
